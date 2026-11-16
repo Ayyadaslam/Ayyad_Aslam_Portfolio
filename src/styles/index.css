@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background-color: #0c0c0c;
+  font-family: 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+@keyframes float-orb {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+
+@keyframes float-orb-reverse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(30px) scale(1.05); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float-orb {
+  animation: float-orb 8s ease-in-out infinite;
+}
+
+.animate-float-orb-reverse {
+  animation: float-orb-reverse 10s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
